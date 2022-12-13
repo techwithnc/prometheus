@@ -76,6 +76,5 @@ sudo systemctl status prometheus
 ## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ## Ref : 
 ## https://www.digitalocean.com/community/tutorials/how-to-install-prometheus-on-ubuntu-16-04
-
 ## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
