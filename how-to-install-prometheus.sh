@@ -41,14 +41,14 @@ scrape_configs:
   - job_name: 'prometheus'
     scrape_interval: 5s
     static_configs:
-      - targets: ['## localhost ## :9090']
+      - targets: ['20.187.80.254:9090']
 EOF
 
 # Set user and group ownership to prometheus user
 sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 
 # Create service for prometheus
-cat <<EOF sudo tee /etc/systemd/system/prometheus.service
+cat <<EOF | sudo tee /etc/systemd/system/prometheus.service
 [Unit]
 Description=Prometheus
 Wants=network-online.target
