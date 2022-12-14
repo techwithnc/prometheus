@@ -1,6 +1,7 @@
 # # How to install prometheus as service in ubuntu
 
 # Step 1 - Creating service user
+sudo apt update
 sudo useradd --no-create-home --shell /bin/false prometheus
 
 sudo mkdir /etc/prometheus
@@ -40,7 +41,7 @@ scrape_configs:
   - job_name: 'prometheus'
     scrape_interval: 5s
     static_configs:
-      - targets: ['20.187.96.88:9090']
+      - targets: ['YOUR-IP-ADD:9090']
 EOF
 
 # Set user and group ownership to prometheus user
@@ -48,7 +49,7 @@ sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 
 # Create service for prometheus
 cat <<EOF | sudo tee /etc/systemd/system/prometheus.service
-[Unit]
+[Unit
 Description=Prometheus
 Wants=network-online.target
 After=network-online.target
@@ -68,9 +69,8 @@ WantedBy=multi-user.target
 EOF
 
 sudo systemctl daemon-reload
+sudo systemctl enable prometheus
 sudo systemctl start prometheus
-sudo systemctl status prometheus
-
 
 ## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ## Ref : 
