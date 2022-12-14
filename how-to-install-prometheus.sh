@@ -33,15 +33,14 @@ sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 sudo rm -rf prometheus-2.40.6.linux-amd64.tar.gz prometheus-2.40.6.linux-amd64
 
 # Step 3 - Configure Prometheus
-cat <<EOF sudo tee /etc/prometheus/prometheus.yml
+cat <<EOF | sudo tee /etc/prometheus/prometheus.yml
 global:
   scrape_interval: 15s
-...
 scrape_configs:
   - job_name: 'prometheus'
     scrape_interval: 5s
     static_configs:
-      - targets: ['20.187.80.254:9090']
+      - targets: ['20.187.96.88:9090']
 EOF
 
 # Set user and group ownership to prometheus user
