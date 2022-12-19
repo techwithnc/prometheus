@@ -36,7 +36,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable node_exporter
 sudo systemctl start node_exporter
 
-# Need to add node_export ip address to prometheus service file
+# Need to add node_export ip address to prometheus yaml file
 # - job_name: 'node_exporter_metrics'
 #   scrape_interval: 5s
 #   static_configs:
