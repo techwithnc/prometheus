@@ -49,7 +49,7 @@ sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 
 # Create service for prometheus
 cat <<EOF | sudo tee /etc/systemd/system/prometheus.service
-[Unit
+[Unit]
 Description=Prometheus
 Wants=network-online.target
 After=network-online.target
