@@ -11,3 +11,8 @@ https://www.youtube.com/watch?v=H5ET6AObsmI&list=PLjq8KzPJ7xk6DBd6yH1nVVSs4VqrT1
 You can download full presentation file from the following link.
 https://drive.google.com/file/d/1Co5jM_x6fkprnnBFn1vm5q-wze3osudq/view?usp=share_link
 
+## Infrastructure
+
+![Prometheus Installation on ubuntu](https://user-images.githubusercontent.com/120474799/211715989-4b6ae205-90f9-4aa7-bfbc-04f2c4f4853e.png)
+
+
